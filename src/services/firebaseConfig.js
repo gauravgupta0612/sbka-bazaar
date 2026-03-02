@@ -3,14 +3,15 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { getStorage } from 'firebase/storage';
 
-// Firebase credentials configured
+// Firebase credentials from environment variables
+// Create a .env file in the root directory with these variables
 const firebaseConfig = {
-  apiKey: "AIzaSyD2PoCCswnpxiCUHMwarL1ibl-ut3A8szE",
-  authDomain: "sbka-bazzaar.firebaseapp.com",
-  projectId: "sbka-bazzaar",
-  storageBucket: "sbka-bazzaar.firebasestorage.app",
-  messagingSenderId: "929559910003",
-  appId: "1:929559910003:web:07cb76c934671c3b7e3c06"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY || process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN || process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID || process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET || process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID || process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID || process.env.EXPO_PUBLIC_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
