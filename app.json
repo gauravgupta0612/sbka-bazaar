@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Sbka Bazzaar",
+    "slug": "sbka-bazzaar",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.sbka.bazzaar"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.sbka.bazzaar"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Sbka Bazzaar to access your photos.",
+          "cameraPermission": "Allow Sbka Bazzaar to access your camera."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Sbka Bazzaar to access your camera."
+        }
+      ]
+    ]
+  }
+}
